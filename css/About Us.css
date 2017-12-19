@@ -1,0 +1,54 @@
+.about-us{
+  width: 90%;
+  height: 100%;
+  margin-left: 75px;
+  margin-right: 50px;
+  padding-top: 68px;
+  padding-bottom: 68px;
+  background-color: rgba(0,0,0,0.5);
+}
+.about-us h1{
+  font-family: Raleway, Helvetica, Arial;
+  font-size: 25px;
+  color: blue;
+  word-spacing: 2px;
+  font-weight: 800;
+  margin-left: 20px;  
+}
+.about-us p, .about-us ul{
+  color: white;
+  font-family: Raleway;
+  font-size: 15px;
+  word-spacing: 1px;
+  line-height: 20px;
+  margin-left: 20px; 
+}
+.about-us p a {
+  color: grey;
+  font-size: 20px;
+  text-decoration:underline;  
+}
+li{
+  padding-left: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.about-us p b{
+  font-size: 18px;
+}
+.css-typing, h1
+{
+    width: 100%;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 10s steps(1, end);
+    animation: type 10s steps(50, end);
+}
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
+}
