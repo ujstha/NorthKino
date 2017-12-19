@@ -1,0 +1,207 @@
+/* textOverImage start */
+
+a{text-decoration:none;}
+/*Add the following compatibility code for IE as you can't animate background-size in IE*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){
+  .textOverImage{background-size:cover!important;}
+}
+
+
+.textOverImage{
+    position:relative;
+    width:225px;
+    height:300px;
+    float:left;    
+    background-size:100%;
+    background-position:top;
+    transition:0.5s;
+    overflow:hidden;
+    border-radius:4px;
+    box-shadow:0 0 4px #000;
+    left: 62px;
+    right: 35px;
+    top: 10px;
+    margin-top: 30px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+  }
+  
+  .textOverImage:hover{
+    background-size:110%;
+    cursor: pointer;
+  }
+  
+.textOverImage:before{
+  position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    transform:translateY(80%);/*use transform:translateY(100%); to remove footer*/
+    background-color:rgba(0,0,0,0.3);
+    color:#fff;
+    padding:0 8px;
+    content:attr(data-title);
+    transition:0.5s 0.1s;
+    color:#fff;
+    text-align: center;
+    font-size:1.5em;
+}
+
+  .textOverImage:after{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    color:#fff;
+    padding:8px;
+    content:attr(data-text);
+    transition:0.5s;
+    padding-top:2em;
+    margin-top:8px;
+    transform:translateY(100%);
+    opacity:0;
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .textOverImage:hover:after{
+    transform:translateY(0);
+    transition:0.5s 0.1s;
+    opacity:1;
+  }
+.textOverImage:hover:before{
+    transform:translateY(0);
+    padding:8px;
+    background-color:rgba(0,0,0,0.6);
+    transition:0.5s;
+}
+
+/* textOverImage end */
+.para-container {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+#containera, #containera1{
+    float: left;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    
+    background-color: rgba(52, 73, 94, .9);
+    margin: auto;
+    padding: 5px;
+    width: 90%;    
+    overflow: auto;
+    margin-top: 10px;
+}
+
+.moviedetail{
+    width: 50%;
+    height: 500px;
+    border: 1px solid black;
+    background-color: rgba(0,0,0,.5);
+    float: right;
+    text-align: left;
+    margin-right: 50px;
+}
+.moviedetail p b{
+    font-family: Raleway;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    color: blue;
+}
+.modal-content a p{
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-right: 50px;
+    color: white;
+    font-family: Arial;
+    line-height: 18px;
+}
+.modal-content img{
+    
+    float: left;
+    width:400px;
+    height:500px;
+       
+}
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.button {
+  display: inline-block;
+  padding: .75rem 1.25rem;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: .2px;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin-left: 50px;
+  margin-top: 150px;
+  margin-right: 50px;
+  font-family: Raleway, Helvetica, Arial;
+}
+.button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0cf;
+  z-index: -2;
+}
+.button:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: slategrey;
+  transition: all .3s;
+  z-index: -1;
+}
+.button:hover {
+  color: black;
+  cursor: pointer;
+}
+.button:hover:before {
+  width: 100%;
+}

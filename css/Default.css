@@ -1,0 +1,241 @@
+body{
+  margin: 0;
+  background-color: #0D1B2A;
+}
+/* Reset */
+
+a{text-decoration:none;color:inherit;}
+html{width:100%;height:100%;}
+
+/* Fonts */
+@font-face {
+  font-family: 'Quicksand';
+  src: url(../font/quicksand/quicksand.ttf)  format('truetype');
+}
+@font-face {
+  font-family: 'Intro';
+  src: url(../font/intro/intro.otf)  format('truetype');
+}
+
+/* Header */
+.logo{
+  position:relative;
+  float:left;
+  margin-left:5%;
+	padding-top: 3vh;
+
+}
+.logo img{
+  width:30%;
+  height:auto;
+}
+
+#all .menu-area h2{
+  float: left;
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 20px;
+
+}
+#all .menu-area form{
+  float: right;
+  margin-top: 1.2em;
+  margin-right: 10px;
+}
+#all .menu-area{
+  background: #1B263B;
+  width: 100%;
+  height: 70px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+div.container
+{
+  font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 1.5em 2em;
+    text-align: center;
+    display: block;
+}
+div.container a
+{
+    color: #FFF;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+div.topBotomBordersOut a:before, div.topBotomBordersOut a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+div.topBotomBordersOut a:before
+{
+    top: 0px;
+    transform: translateY(10px);
+}
+
+div.topBotomBordersOut a:after
+{
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+input[type=text]{
+  background-image: url(https://cms-assets.tutsplus.com/uploads/users/523/posts/27345/preview_image/search-icon-large.png);
+  background-size: 50px;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 8px 10px 8px 50px;
+  border-radius: 60px;
+  margin-right: 10px;
+  outline: none;
+  width: 70px;
+  float: right;
+  transform: translateY(-8px);
+  -webkit-transition: width 0.7s ease-in-out;
+  -moz-transition: width 0.7s ease-in-out;
+  -ms-transition: width 0.7s ease-in-out;
+  -o-transition: width 0.7s ease-in-out;
+  transition: width 0.7s ease-in-out;
+}
+input[type=text]:focus{
+  width: 250px;
+}
+input#menu{
+    display: none;
+}
+/*header end*/
+/*slideIn*/
+@keyframes slideInFromUp {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+header, .modal-content img, #myBtn2 {
+  animation: 0.8s ease-out 0s 1 slideInFromUp;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#myBtn4, #myBtn8, #myBtn9 {
+  animation: 2s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+#searchslide, #myBtn8, #myBtn3 {
+  animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#header, .moviedetail, #myBtn, #myBtn1, #myBtn5  {
+  animation: 2s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#myBtn1, #myBtn6  {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromDown {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#myBtn7 {
+  animation: 1.5s ease-out 0s 1 slideInFromDown;
+}
+
+@keyframes slideInFromUp {
+  0% {
+    transform: translateY(-200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#myBtn2 {
+  animation: 1.5s ease-out 0s 1 slideInFromUp;
+}
+#aboutnorthkino{
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 50px;
+  color: white;
+  border: 1px solid black;
+  /*margin-left: 70px; for 90% width*/
+  font-family: Raleway, Helvetica, Arial;
+  top: 800px;
+  font-size: 18px;
+  background-color: rgba(0,0,0,0.3);
+  letter-spacing: 1px;
+  position: absolute;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+#aboutnorthkino:hover{
+  z-index: 3;
+  transition: all .2s ease-in-out;
+  transform: scale(1.5);
+  cursor: pointer;
+}
